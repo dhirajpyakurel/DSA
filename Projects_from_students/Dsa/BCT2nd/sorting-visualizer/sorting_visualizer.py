@@ -51,7 +51,8 @@ class SortVisualizer:
                     self.draw_array(self.array)
                     self.root.update()
                     self.root.after(self.delay_time)
-                    self.array[j], self.array[j + 1] = self.array[j + 1], self.array[j]
+                    self.array[j], self.array[j +
+                                              1] = self.array[j + 1], self.array[j]
                     made_swap = True
                     self.draw_array(self.array)
                     self.root.update()
@@ -170,7 +171,8 @@ class SortVisualizer:
             length=500,
         )
         self.slider.set(self.num_elements)
-        self.slider.config(bg="#EAA222", fg="black", highlightbackground="black")
+        self.slider.config(bg="#EAA222", fg="black",
+                           highlightbackground="black")
         self.slider.grid(row=0, column=0)
 
         self.delay_slider = tk.Scale(
@@ -184,20 +186,23 @@ class SortVisualizer:
             length=300,
         )
         self.delay_slider.set(self.delay_time / 1000)
-        self.delay_slider.config(bg="#EAA222", fg="black", highlightbackground="black")
+        self.delay_slider.config(
+            bg="#EAA222", fg="black", highlightbackground="black")
         self.delay_slider.grid(row=0, column=1)
 
         self.dropdown = tk.OptionMenu(
             self.root, self.sort_algorithm, *self.sort_options
         )
-        self.dropdown.config(bg="yellow", fg="black", highlightbackground="black")
+        self.dropdown.config(bg="yellow", fg="black",
+                             highlightbackground="black")
 
         self.dropdown.grid(row=0, column=2)
 
         self.sort_button = tk.Button(
             self.root, text="Sort", command=self.handle_sort_button
         )
-        self.sort_button.config(bg="#00FF00", fg="black", highlightbackground="black")
+        self.sort_button.config(bg="#00FF00", fg="black",
+                                highlightbackground="black")
         self.sort_button.grid(row=0, column=3)
 
         self.draw_array(self.array)

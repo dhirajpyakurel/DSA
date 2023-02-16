@@ -1,0 +1,248 @@
+h1{ 
+    
+    color: azure;
+    text-align: center;
+    font-size: 60px;
+    font-weight:700;
+    padding-top: 120px;
+    z-index: 9999;
+}
+h2{font-family: 'Great Vibes', cursive;
+    color: azure;
+    margin-top:-10px;
+    text-align: center;
+    font-size: 50px;
+    font-weight:700;
+    z-index: 9999;
+    
+}
+
+h3{
+  font-family: 'Lato', sans-serif; 
+    color: #f48db4;
+    text-align: center;
+    font-size: 60px;
+    font-weight:800;
+    margin-top: -10px;
+    z-index: 9999;
+}
+body{
+    background-color: black;
+}
+.container{
+    margin-top:48px ;
+}
+.btn{
+    padding: 10px;
+    padding-left: 30PX;
+    padding-right: 30PX;
+    border: thick;
+    border-color: #b4b7c2;
+    font-family: 'Lato', sans-serif;
+    background-color: #eaebf1;
+    font-size: 30px;
+    font-weight:600;
+    color: rgb(3, 0, 0);
+   
+}
+.btn:hover {
+    border: thick;
+    background-color: #f48db4;
+    color: rgb(7, 1, 1);
+    
+  }
+  .footer{
+    margin-top: 10%;
+    text-align: center;
+    bottom: 0;
+    z-index: 9999;
+    width: 100%;
+    background-blend-mode: normal;
+  }
+  
+  #bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+  }
+  .card
+  {
+    margin-left: 15px;
+    background-color: rgb(164, 173, 184);
+    border: rgb(0, 0, 0);
+    
+  }
+ 
+  .abiral{
+    height: 288px;
+  }
+  .profile{
+    font-size: 20px;
+    background-color: #e7eaee;
+  }
+  .card-title
+  {
+    font-family: 'Lato', sans-serif;
+    font-size: 30px; 
+    font-weight: 700;;
+  }
+  .profile:hover{
+    background-color: #010205;
+    color: white;
+  }
+  .l1{
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .l2{
+    margin-top: -9px;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  h4{
+    text-align: center;
+    color: #e7eaee;
+    margin-top: 500px;
+    position: relative;
+    font-family: 'Lato', sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+
+  }
+  .link{
+    color: #010205;
+  }
+  h5{
+    color: azure;
+    text-align: center;
+    font-size: 30px;
+    font-weight:700;
+    padding-top: 15px;
+    z-index: 9999;
+  }
+  .form
+  {
+    margin-left: 25%;
+    width: 50%;
+  }
+  .file{
+    margin-top: 40px;
+  }
+  .submit{
+    margin-left: 43%;
+    margin-top: 20px;
+  }
+  .submit:hover{
+    background-color: blue;
+  }
+.help {
+    width: 40px;
+    margin: 0 auto;
+  }
+  
+  .help .question {
+    height: 40px;
+    width: 40px;
+    background: #ebedf0;
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .help .popup, .help .popup2 {
+    width: 560px;
+    height: 0px;
+    text-align: left;
+    overflow: hidden;
+    position: relative;
+   
+    opacity: 0;
+    transition: 1s;
+  }
+  
+  .help .popup {
+    left: -260px;
+    top: 10px;
+  }
+  
+  .help .popup2 {
+    height: 220px;
+  }
+  
+  .help .popup2 h4 {
+    font-size: 18px;
+    padding: 10px;
+    margin: 0;
+  }
+  
+  .help:hover .popup {
+    opacity: 1;
+    height: 270px;
+  }
+  
+  .help .tell-me p:first-child {
+    color: #c4c4c4;
+    cursor: pointer;
+  }
+  
+  .tell-me {
+    width: 150px;
+  }
+  
+  .help .tell-me:hover .popup2 {
+    top: -220px;
+    opacity: 1;
+  }
+  
+  .help .popup h3 {
+    margin: 0;
+    padding: 10px 0 0 10px;
+    height: 30px;
+    
+    color: #0f0f0f;
+    font-weight: 400;
+    font-size: 18px;
+  }
+  
+  .help .popup p {
+    font-size: 16px;
+    padding: 10px;
+    margin: 0;
+  }
+  
+  .help .popup .popup2 .sub-levels {
+    padding: 0 0 10px 140px;
+  }
+  
+  .help .popup .popup2 .sub-levels strong {
+    font-size: 20px;
+  }
+  
+  .help .popup .popup2 p:nth-child(5) {
+    padding: 20px 0 0 10px;
+  }
+  
+  .help .popup a {
+    text-decoration: none;
+    color: #317eac;
+  }
+  
+  .help .popup a:visited {
+    color: #317eac;
+  }
+  
+  .help .popup p em {
+    font-size: 12px;
+  }
+  
+  p{
+    margin-top: 4px;
+    color: #eaebf1;
+    font-weight: 700;
+    font-size: 50px;
+  }

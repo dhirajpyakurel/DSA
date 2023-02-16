@@ -26,9 +26,9 @@ This is a Sorting Visualizer program that displays a graphical representation of
 7. Click on the "Sort" button to visualize the sorting algorithm.
 
 # Submitted by:
-<strong>1. Aashish Pokharel (01), BCT A </strong>
-<strong>2. Aashutosh Joshi (02), BCT A </strong>
-<strong>3. Ayush Acharya (21), BCT A </strong>
+<strong>1. Aashish Pokharel (01), BCT A </strong> <br>
+<strong>2. Aashutosh Joshi (02), BCT A </strong> <br>
+<strong>3. Ayush Acharya (21), BCT A </strong> <br>
 
 # Acknowledgments
 This project was heavily inspired by [15 Sorting Algorithms in 6 Minutes](https://youtu.be/kPRA0W1kECg) - [Timo Bingmann](https://www.youtube.com/@TimoBingmann)

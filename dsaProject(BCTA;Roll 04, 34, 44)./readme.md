@@ -6,19 +6,14 @@ PROJECT INFORMATION:
 
 
 
-PROGRAMMING LANGUAGE USED           :
-
-C++ 
+PROGRAMMING LANGUAGE USED           : C++ 
 
 
-RESULT    			    :
-
-
-A WIN32 CONSOLE APPLICATION
+RESULT    			    : A WIN32 CONSOLE APPLICATION
 
 
 
-COMPATIBILITY		    :
+COMPATIBILITY		            :
 
 
 	Tested on Windows 10/64 Bit,
@@ -38,10 +33,9 @@ COMPATIBILITY		    :
 DESCRIPTION:
 	
 	
-	A simple yet effective effort to make an efficient shortest path
-finding application. The program uses array implementation of Graph Data
-structure to then be used in the Djikstra's Algorithm in order to perform
-its function. 
+	A simple yet effective effort to make an efficient shortest path finding application.
+	The program uses array implementation of Graph Data structure to then be used in the 
+	Djikstra's Algorithm in order to performits function. 
 
 
 CREATORS OF THIS PROJECT:

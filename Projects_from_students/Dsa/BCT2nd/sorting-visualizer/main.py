@@ -6,7 +6,8 @@
 # Class: BCT 'A'
 # Authors: 1. Aashish Pokharel (01)
 #          2. Aashutosh Joshi (02)
-#          3. Ayush Acharya (21)
+#          3. Ashwani Chaudhary (20)
+#          4. Ayush Acharya (21)
 
 from sorting_visualizer import SortVisualizer
 

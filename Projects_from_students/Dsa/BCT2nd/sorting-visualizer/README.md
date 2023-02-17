@@ -28,7 +28,8 @@ This is a Sorting Visualizer program that displays a graphical representation of
 # Submitted by:
 <strong>1. Aashish Pokharel (01), BCT A </strong> <br>
 <strong>2. Aashutosh Joshi (02), BCT A </strong> <br>
-<strong>3. Ayush Acharya (21), BCT A </strong> <br>
+<strong>3. Ashwani Chaudhary (20), BCT A </strong> <br>
+<strong>4. Ayush Acharya (21), BCT A </strong> <br>
 
 # Acknowledgments
 This project was heavily inspired by [15 Sorting Algorithms in 6 Minutes](https://youtu.be/kPRA0W1kECg) - [Timo Bingmann](https://www.youtube.com/@TimoBingmann)

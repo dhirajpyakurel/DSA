@@ -19,7 +19,5 @@ The objective of the game is to slide numbered tiles on a grid to combine them t
 ## Game instructions
   Press WASD or Arrow keys to give direction to the tiles to move and try to join tiles to reach 2048, or even more!?
 
-![IMG 1](./img/initial.png?raw=true "initial")
-![IMG 2](./img/gamewon.png?raw=true "youwon")
-![IMG 3](./img/gameover.png?raw=true "youlost")
+![IMG 1](./img/initial.png?raw=true "initial") ![IMG 2](./img/gamewon.png?raw=true "youwon") ![IMG 3](./img/gameover.png?raw=true "youlost")
 

@@ -15,7 +15,7 @@ int i;
 
 
 
-void selectionSort()
+void bubbleSort()
 {
     struct Contact *temp;
     int count=0,i;
@@ -111,7 +111,7 @@ void deleteContactBeg(){
         printf("Contact is Empty");
         printf("\n********************************************\n"); 
     }else{
-        // selectionSort();
+        // bubbleSort();
         temp=head;
         head=temp->next;
         printf("\n********************************************\n");
@@ -131,7 +131,7 @@ void deleteContactEnd(){
         printf("\n********************************************\n"); 
     }else if(head->next==NULL)
     {
-        // selectionSort();
+        // bubbleSort();
         temp=head;
         head=NULL;
         printf("\n********************************************\n");
@@ -301,7 +301,7 @@ void display()
         printf("\n********************************************\n");
 
     }else{
-        selectionSort();
+        bubbleSort();
         i=0;
         printf("\n********************************************\n");
         printf("Contacts are: \n");

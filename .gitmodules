@@ -1,3 +1,4 @@
 [submodule "ProjectBCT_shrijan_regmi"]
 	path = ProjectBCT_shrijan_regmi
 	url = https://github.com/shrijanRegmi/flutter-micro-simulator.git
+  branch = main

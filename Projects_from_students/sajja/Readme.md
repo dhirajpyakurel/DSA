@@ -1,2 +1,3 @@
-#Hangman
-##A simple game of Hangman in C
+# Hangman
+## A simple game of Hangman in C
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body style="background-color:#323232;">
+
+    <header>
+        <p style="text-align: center;background-color:#C5ADC5; color:rgb(0, 0, 0);font-family: 'Times New Roman', Times, serif; font-size: xxx-large;">Sorting  Visualizer</p>
+    
+        <nav>
+        <div class="array-inputs">
+                <p>Array Size:</p>
+                <input id="a_size" type="range" min=10 max=70 step=1 value=20>
+                <p> Speed:</p>
+                <input id="a_speed" type="range" min=1 max=10 step=1 value=4>
+            </div>
+
+                <div class="header_right">
+                    <button class="btn-prop" id="a_generate"style=" padding: 10px; background-color: #3b3a3a; color:rgb(183, 193, 194)">GENERATE</button> 
+                  
+                </div>
+
+           
+        </nav>
+        
+ 
+
+    </header>
+
+    <section>
+
+        <div id="Info_Cont1">
+
+        </div>
+
+        <div id="array_container">
+
+        </div>
+
+        <div id="Info_Cont2">
+
+        </div>
+
+    </section>
+
+    <footer class="footer" >
+        <div class="algos" >
+            <button style="margin: 30px; padding: 7px; background-color: #3b3a3a; color:rgb(183, 193, 194);">Bubble</button>
+            <button style="margin: 30px; padding: 7px; background-color: #3b3a3a; color:rgb(183, 193, 194)">Insertion</button>
+            <button style="margin: 30px;padding: 7px;background-color: #3b3a3a; color:rgb(183, 193, 194)">Merge</button>
+            <button style="margin: 30px;padding: 7px; background-color: #3b3a3a; color:rgb(183, 193, 194)">Quick</button>
+        </div>
+<div style="color: rgb(33, 31, 36);">developed by partik and ravin | 2023</div>
+<br>
+ 
+
+    </footer>
+
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/visualizations.js"></script>
+
+    <script src="./scripts/bubble_sort.js"></script>
+    <script src="./scripts/insertion_sort.js"></script>
+    <script src="./scripts/merge_sort.js"></script>
+    <script src="./scripts/quick_sort.js"></script>
+
+</body>
+
+
+</html>

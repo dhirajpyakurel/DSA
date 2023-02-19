@@ -5,9 +5,8 @@
 #include <math.h>
 #include <stdlib.h>
 #include <time.h>
-int i, j, k, arrowInput, won = 1, hasMoved, board[4][4], tempBoard[4][4];
-char scoreText[100], tileText[100];
-int score = 0, highscore = 0;
+int i, j, k, l, m = 1, arrowInput, addedNumber, moved, count, num, won = 1,score = 0, hasMoved, highscore = 0, board[4][4], tempBoard[4][4];
+char scoreText[100], tileText[100], numberText[10], scoreUpdate[15], highscoreText[15];
 int moveUp();
 int moveDown();
 int moveLeft();
@@ -20,9 +19,9 @@ int canMove();
 void checkWin();
 int main() {
 	int gmode = DETECT, gdrive;
+	FILE * fp = fopen("highscore.txt", "r");
 	srand(time(NULL));	
 	initgraph( & gmode, & gdrive, "C:\\TURBOC3\\BGI");
-	FILE * fp = fopen("highscore.txt", "r");
 	if (fp != NULL) {
 		fscanf(fp, "%d", & highscore);
 		fclose(fp);
@@ -30,20 +29,7 @@ int main() {
 	generate(); // generate 2 random number,
 	generate();	// to keep in the board;
 	createBoard(); // create the board;
-	while(1) {
-		int moved = 0;
-		if (canMove() == 0) {
-			gameOver();
-			if (score >= highscore) {
-				FILE * fp = fopen("highscore.txt", "w");
-				fprintf(fp, "%d", score);
-				fclose(fp);
-			}
-			do{
-				arrowInput = getch();
-				if(arrowInput == 27) exit(0);
-			} while(arrowInput != 27);		
-		}
+	while(m) {
 		if(won) checkWin();
 		arrowInput = getch();
 		switch (arrowInput) {
@@ -73,6 +59,16 @@ int main() {
 			generate();
 			createBoard();
 		}
+		moved = 0;
+		if (canMove() == 0) {
+			gameOver();
+			if (score >= highscore) {
+				FILE * fp = fopen("highscore.txt", "w");
+				fprintf(fp, "%d", score);
+				fclose(fp);
+			}
+			m=0;		
+		}
 	} 
 	getch();
 	closegraph();
@@ -96,12 +92,13 @@ void checkWin(){
 	}
 }
 void gameOver() {
-    delay(1000);
+	delay(1000);
 	settextstyle(3, 0, 5);
 	setcolor(WHITE);
 	setfillstyle(SOLID_FILL, BLACK);
 	bar(200, 250, 440, 320);
 	outtextxy(210, 250, "GAME OVER");
+	delay(5000);
 	setcolor(DARKGRAY);
 	settextstyle(3, 0, 1);
 	outtextxy(250, 295, "Press ESC to exit.");
@@ -144,8 +141,8 @@ int canMove() {
 }
 int moveUp() {
 	hasMoved = 0;
-	for (int i = 0; i < 4; i++) {
-		for (int j = 0; j < 4; j++) {
+	for (i = 0; i < 4; i++) {
+		for (j = 0; j < 4; j++) {
 			tempBoard[i][j] = board[i][j];
 		}
 	}
@@ -184,8 +181,8 @@ int moveUp() {
 	return hasMoved;
 }
 int boardMovement() {
-	for (int i = 0; i < 4; i++) {
-		for (int j = 0; j < 4; j++) {
+	for (i = 0; i < 4; i++) {
+		for (j = 0; j < 4; j++) {
 			if (board[i][j] != tempBoard[i][j]) {
 				return 1;
 			}
@@ -219,8 +216,6 @@ int moveRight() {
 }
 void createBoard() {
 	cleardevice();
-	char numberText[10], scoreUpdate[15], highscoreText[15];
-	int count, num;
 	setfillstyle(SOLID_FILL, BLACK);
 	bar(0, 0, getmaxx(), getmaxy());
 	setfillstyle(SOLID_FILL, LIGHTGRAY);
@@ -299,11 +294,11 @@ void createBoard() {
 	outtextxy(170, 462, "PROJECT BY: Abinawan Bhattarai & Binisha Maharjan.");
 }
 void generate() {
-	int addedNumber = 0;
+	addedNumber = 0;
 	do {
 		i = rand() % 4;
 		j = rand() % 4;
-		int l = rand() % 10;
+		l = rand() % 10;
 		if (board[i][j] == 0) {
 			if (l < 9) {
 				board[i][j] = 2;

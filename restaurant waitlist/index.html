@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Restaurant Waitlist</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" type="image/f-icon" href="/images/fav.jpg"
+
+
+</head>
+<body class=" bg-[#151515]">
+	<div class="container-make text-center">
+		<h1 class=" pt-8 text-5xl text-white font-space">Restaurant Waitlist</h1>
+    <h2  class=" pt-8 text-xl text-white font-space">We Are Occupied Please Hold </h2>
+    <p  class=" pt-8 text-sm text-white">Thank You For Your Patience</p>
+		<div class="waitlist-container">
+			<div class="input-container pt-8 pb-8">
+				<input type="text" placeholder="Enter name" class="name-input rounded h-auto text-center">
+				<button class="add-button ml-8 rounded h-auto mx-5 px-5 py-1 bg-[#C6CA53]">Add to waitlist</button>
+			</div>
+			<table class=" pt-8">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Time added</th>
+						<th>Wait time</th>
+					</tr>
+				</thead>
+				<tbody id="waitlist">
+				</tbody>
+			</table>
+      <div class="dataentered pt-8 text-white text-xl">
+			<p>Estimated wait time: <span id="estimate-time">0 minutes</span></p>
+    </div>
+    <div class=" pt-8">
+			<button class="dequeue-button ml-8 rounded h-auto mx-5 px-5 py-1 bg-[#C6CA53]">Next Customer</button>
+    </div>
+		</div>
+	</div>
+	<div class="pt-16">
+	<div class=" bg-[#9D6381] text-center   text-white">
+		<h1 class="pt-2 text-xl"  > What is Restaurant Waitlist ?</h1>
+		<p class=" pt-3 ml-2 mr-2 pb-2 text-sm">The waitlist program is designed to manage a restaurant's waitlist. Here's how it works:
+
+			When a customer arrives, their name is entered into the waitlist.
+			As new customers are added to the waitlist, the existing customers are moved down in the list.
+			When a table becomes available, the next customer on the waitlist is notified.
+			If a customer leaves or cancels their reservation, they are removed from the waitlist.
+			The program can estimate wait times for customers based on the number of parties ahead of them and average wait times.</p>
+	</div>
+</div>
+
+
+
+	<script src="app.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+		fontFamily:{
+			'space':['Source Code Pro', 'monospace']
+		},
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+</body>
+</html>

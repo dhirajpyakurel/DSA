@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+th{
+   padding-left: 4rem;
+}
+
+td{
+    padding-left: 4rem;
+}/* Style for the form */
+form {
+    margin-bottom: 20px;
+  }
+  label {
+    display: inline-block;
+    width: 100px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  input[type="text"] {
+    width: 200px;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Style for the table */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th, td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+  th {
+    background-color: #4CAF50;
+    color: white;
+  }
+  /* tr:nth-child(even) {
+    
+  } */
+  
+
+  #waitlist{
+    color:  aliceblue;
+  }

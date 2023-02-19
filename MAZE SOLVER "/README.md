@@ -21,3 +21,5 @@ This is attempted as a mini project for DSA _BEI (II/II)  . The code is intended
 ![image](https://user-images.githubusercontent.com/120787628/219952978-acf55741-756f-4e1e-8a3b-4e486c99f72d.png)
 ![image](https://user-images.githubusercontent.com/120787628/219953062-dcccab83-91b1-4c95-9909-153224fa1a63.png)
 
+##ppt link
+https://docs.google.com/presentation/d/1unXFz8Mg9ZEoT3csJyf-g7ELOmqOrJSNegDnXxyJdB4/edit?usp=sharing

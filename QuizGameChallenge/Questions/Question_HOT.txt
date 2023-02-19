@@ -1,0 +1,50 @@
+What are the chances that no two boys are sitting together for a photograph if there are 5 girls and 2 boys?
+1/21||4/7||2/7||5/7||
+5/7
+4 10
+**||**
+  In a drawer there are 4 white socks, 3 blue socks and 5 grey socks. Two socks are picked randomly. What is the possibility that both the socks are of same color?
+4/11||1||2/33||19/66||
+19/66
+4 10
+**||**
+What is the possibility of having 53 Thursdays in a non-leap year?
+6/7||1/7||1/365||53/365||
+1/7
+4 10
+**||**
+ A box has 5 black and 3 green shirts. One shirt is picked randomly and put in another box. The second box has 3 black and 5 green shirts. Now a shirt is picked from second box. What is the probability of it being a black shirt?
+4/9||29/72||8/72||3/16||
+29/72
+4 10
+**||**
+Square: Cube
+Triangle: Prism||Line: Cylinder||Circle: Sphere||Sphere: Earth||
+Triangle: Prism
+4 10
+**||**
+I'm a mother's child and a father's child but nobody's son. What am I?
+A grandson||A daughter||A father||A uncle||
+A daughter
+4 10
+**||**
+What ten letter word that starts with gas?
+Retirement||Automobile||Abberation||Television||
+Automobile
+4 10
+**||**
+I start with M, end with X, and have a never ending amount of letters. What am I?
+Mix||Mailbox||Multiplex||Matrix||
+Mailbox
+4 10
+**||**
+What tree do we all carry in our hands?
+Cedar||Oak||Eucalyptus||Palm||
+Palm
+4 10
+**||**
+What runs around a house but does not move?
+A dog||An alarm||A garden gnome||A fence||
+A fence
+4 10
+**||**

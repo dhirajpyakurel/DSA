@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="OPD.css" />
+    <title>Heal Pulse Hospital Pvt. Ltd</title>
+  </head>
+  <style>
+    body {
+      background-image: url(Hospital.webp);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    }
+  </style>
+  <body>
+    <div class="form">
+      <form action="connect.php" method="post">
+        <h1>New Patient Registration</h1>
+
+        <label for="firstName">Name :</label>
+        <input
+          id="firstName"
+          name="firstName"
+          type="text"
+          placeholder="First Name"
+          required
+        />
+        <label for="lastName">Last Name</label>
+        <input
+          id="lastName"
+          name="lastName"
+          type="text"
+          placeholder="Last Name"
+          required
+        />
+        <label for="address">Address :</label>
+        <input
+          id="address"
+          name="address"
+          type="text"
+          placeholder="Address"
+          required
+        />
+        <label for="number">Phone Number :</label>
+        <input
+          id="phone-num"
+          name="number"
+          type="text"
+          placeholder="Phone Number"
+          required
+        />
+        <label for="age">Age :</label>
+        <input id="age" name="age" type="number" placeholder="Age" required />
+        <label for="sex">Sex :</label>
+        <input id="sex" name="sex" type="text" placeholder="Sex" required />
+        <tr>
+          <td><input id="submitData" type="submit" /></td>
+        </tr>
+      </form>
+    </div>
+  </body>
+</html>

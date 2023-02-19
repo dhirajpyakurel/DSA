@@ -1,15 +1,48 @@
 from tkinter import *
-from tkinter import ttk #ttk stands for themed tkinter
+from tkinter import font
+from tkinter import ttk 
 import customtkinter
 from bubblesort import bubble_sort
 import random
 from quicksort import quick_sort
 from merge_sort import merge_sort
 from selection_sort import selection_sort
+from message import *
+from insertion import insertion_Sort
 main = Tk()
 main.title("Sorting Visualizer")
-main.geometry('900x650+400+80') #+400 and + 80 is set where i want my window to pop out
+main.geometry('1400x670+50+50') 
 main.config(bg="#082A46")
+main.resizable(False,False)
+message = message_begin
+def clear():
+    text_box.delete(1.0,END)
+
+def Info():
+    if selected_algorithm.get() == "Quick Sort":
+     message = message_qucik
+
+    elif selected_algorithm.get() == "Merge Sort":
+        message = message_merge
+    
+    elif selected_algorithm.get() == "Bubble Sort":
+        message = message_bubble
+    
+    elif selected_algorithm.get() == "Selection Sort":
+        message = message_selection
+
+    elif selected_algorithm.get() == "Insertion Sort":
+        message = message_insert
+    
+    else:
+        message = message_begin
+
+    
+    text_box.config(state=NORMAL)
+    clear()
+    text_box.insert('end',message)
+    text_box.config(state=DISABLED)
+
 def StartAlgorithm():
     global data
     if not data :
@@ -28,6 +61,9 @@ def StartAlgorithm():
 
     elif algo_menu.get() == "Selection Sort":
         selection_sort(data,drawData,speedscale.get())
+    
+    elif algo_menu.get() == "Insertion Sort":
+        insertion_Sort(data,drawData,speedscale.get())
 
 def drawData(data,colorArray):
     canvas.delete('all')
@@ -76,6 +112,7 @@ def Generated():
     if minivalue > maxivalue:
         minivalue,maxivalue = maxivalue, minivalue
     
+    
     for _ in range(size):
         data.append(random.randint(minivalue,maxivalue))
     drawData(data,["#082A46" for x in range (len(data))])
@@ -87,61 +124,72 @@ selected_algorithm = StringVar()
 
 mainlabel = Label(main, text = "Algorithm", font = ("new roman",16,"bold"),bg="#05897A",
                 width = 10,fg = 'black',relief = GROOVE,bd=5,anchor= W )
-mainlabel.place(x=0,y=0)
+mainlabel.grid(row=0,column=0)
 
 
 algo_menu = ttk.Combobox(main,width = 15,font = ('new roman',19,"bold"),textvariable=selected_algorithm,
-            values=['Bubble Sort','Merge Sort',"Quick Sort","Selection Sort"])
-algo_menu.place(x =145,y=0)
+            values=['Bubble Sort','Merge Sort',"Quick Sort","Selection Sort","Insertion Sort"])
+algo_menu.grid(row = 0 , column =1,padx=5)
 algo_menu.current(0) #by default bubble sort
 
-random_generate  = Button(main,text="Generate",bg="#D50505",font = ("times",12," bold"),relief = RAISED,
-                activebackground="#F28407",activeforeground="white",bd=5,width=10,command = Generated)
-random_generate.place(x = 750,y=60)
+speedlabel = Label(main, text = "Time Delay", font = ("new roman",16,"bold"),bg="#0E6DA5",
+                width = 10,fg = 'black',relief = GROOVE,bd=5 ,anchor=W)
+speedlabel.grid(row = 0,column=2,padx=5)
+
+speedscale = Scale(main,from_=0.1,to = 5, resolution =0.2 ,length=200,digits=2,orient = HORIZONTAL,font = ("arial",14,"bold"),
+            relief=GROOVE,bd=2,width =10)
+speedscale.grid(row= 0 , column= 3,padx = 5)
+
+start =Button(main,text="Start",bg="#04f900",font = ("times",12,"bold"),relief = RAISED,
+                activebackground="#F28407",activeforeground="white",bd=5,width=10,command=StartAlgorithm)
+start.grid(row=0,column= 4,padx=5)
+
 
 sizevaluelabel = Label(main, text = "Size", font = ("new roman",16,"bold"),bg="#0E6DA5",
                 width = 10,fg = 'black',relief = GROOVE,bd=5 ,anchor = W)
-sizevaluelabel.place(x=0,y=60)
+sizevaluelabel.grid(row=2,column=0)
 
 sizevalue = Scale(main,from_=1,to = 30, resolution =1 ,orient = HORIZONTAL,font = ("times",14,"bold"),
-            relief=RIDGE,bd=2,width =10)
-sizevalue.place(x=120,y=60)
+            relief=RIDGE,bd=2,width =10,length=200)
+sizevalue.grid(row=2,column=1,padx= 0)
 
 
 minvaluelabel = Label(main, text = "Min Value", font = ("new roman",16,"bold"),bg="#0E6DA5",
                 width = 10,fg = 'black',relief = GROOVE,bd=5,anchor= W )
-minvaluelabel.place(x=250,y=60)
+minvaluelabel.grid(row=1,column=0)
 
 minvalue = Scale(main,from_=0,to = 10, resolution =1 ,orient = HORIZONTAL,font = ("times",14,"bold"),
-            relief=RIDGE,bd=2,width =10)
-minvalue.place(x=370,y=60)
+            relief=RIDGE,bd=2,width =10,length=200)
+minvalue.grid(row=1,column=1,pady=5)
 
 
 
 maxvaluelabel = Label(main, text = "Max Value", font = ("new roman",16,"bold"),bg="#0E6DA5",
                 width = 10,fg = 'black',relief = GROOVE,bd=5 ,anchor= W)
-maxvaluelabel.place(x=500,y=60)
+maxvaluelabel.grid(row = 1,column=2)
 
 maxvalue = Scale(main,from_=0,to = 100, resolution =1 ,orient = HORIZONTAL,font = ("times",14,"bold"),
-            relief=RIDGE,bd=2,width =10)
-maxvalue.place(x=620,y=60)
+            relief=RIDGE,bd=2,width =10,length=200)
+maxvalue.grid(row=1,column=3)
 
-start =Button(main,text="Start",bg="#04f900",font = ("times",12,"bold"),relief = RAISED,
-                activebackground="#F28407",activeforeground="white",bd=5,width=10,command=StartAlgorithm)
-start.place(x = 750,y=0)
+random_generate  = Button(main,text="Generate",bg="#D50505",font = ("times",12," bold"),relief = RAISED,
+                activebackground="#F28407",activeforeground="white",bd=5,width=10,command = Generated)
+random_generate.grid(row = 1,column = 4)
 
-speedlabel = Label(main, text = "Time Delay", font = ("new roman",16,"bold"),bg="#0E6DA5",
-                width = 10,fg = 'black',relief = GROOVE,bd=5 ,anchor=W)
-speedlabel.place(x=400,y=0)
+info_generate  = Button(main,text="How it Works?",bg="#FFFF28",font = ("times",12," bold"),relief = RAISED,
+                activebackground="#F28407",activeforeground="white",bd=5,width=11,command = Info)
+info_generate.grid(row = 2,column = 2)
 
-speedscale = Scale(main,from_=0.1,to = 5, resolution =0.2 ,length=200,digits=2,orient = HORIZONTAL,font = ("arial",14,"bold"),
-            relief=GROOVE,bd=2,width =10)
-speedscale.place(x=520,y=0)
 
 
 namelabel = Label(main, text = "Developed by : AARYAB PANTA , SHUBHAM RAJ PAUDEL ", font = ("new roman",16,"bold"),bg="#0E6DA5",
                 width = 66,fg = 'black',relief = GROOVE,bd=5,anchor=W )
-namelabel.place(x=10,y=600)
+namelabel.place(x=10,y =625)
 canvas = Canvas(main,width=870,height = 450,bg = 'black')
-canvas.place(x=10,y=130)
+canvas.place(x=10,y=160)
+text_box = Text(main,height=25,width=40,font = ("Calibri Light",16,"bold"),bg="#0E6DA5",
+                fg = 'black',relief = GROOVE,bd=5 ,wrap=WORD)
+text_box.insert('end',message)
+text_box.config(state=DISABLED)
+text_box.place(x = 900,y=0)
 main.mainloop()

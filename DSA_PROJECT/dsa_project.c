@@ -2,6 +2,7 @@
 #include<stdio.h>
 #include<malloc.h>
 #include<conio.h>
+#include<stdlib.h>
 int disease;
 struct node
 {

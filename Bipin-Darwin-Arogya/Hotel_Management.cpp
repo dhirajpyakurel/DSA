@@ -316,7 +316,7 @@ public:
 		{
 
 			int t_id, found = 0;
-			cout << "\n\nEnter Student ID for Deletion";
+			cout << "\n\nEnter Room ID for Deletion";
 			cin >> t_id;
 			if (t_id == head->id)
 			{

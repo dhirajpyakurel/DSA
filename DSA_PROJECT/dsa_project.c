@@ -1,4 +1,5 @@
 
+
 // hospital management system
 #include <stdio.h>
 #include <malloc.h>
@@ -34,7 +35,7 @@ int main()
     int option;
     do
     {
-        system("COLOR 80");
+        system("COLOR 20");
         printf("\t\t\t-------------------------------\n");
         printf("\t\t\t\t\t\t\t\t\t\t\t\n");
         printf("\t\t\t\t\t\t\t\t\t\t\n");
@@ -197,4 +198,3 @@ void print_disease(int disease)
         exit(0);
     }
 }
-

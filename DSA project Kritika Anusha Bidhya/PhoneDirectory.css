@@ -1,0 +1,84 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(228, 250, 236);
+  }
+  
+  h1 {
+    text-align: center;
+    font-family: Comic Sans Ms;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 20px auto;
+  }
+  
+  label {
+    margin-bottom: 20px;
+  }
+  
+  input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  button {
+    padding: 15px;
+    background-color: #00204b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #01062a;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  li:hover {
+    background-color: #dfdff7;
+  }
+  
+  .delete {
+    padding: 5px 10px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgb(44, 44, 44);
+    cursor: pointer;
+  }
+  
+  .delete:hover {
+    background-color: #ff2a17;
+  }
+
+
+  

@@ -1,30 +1,40 @@
-//hospital management system
-#include<stdio.h>
-#include<malloc.h>
-#include<conio.h>
-#include<stdlib.h>
-int disease;
+
+// hospital management system
+#include <stdio.h>
+#include <malloc.h>
+#include <stdlib.h>
 struct node
 {
-    char *name[100];
+    char name[100];
     int age;
-    char *address[100];
+    char address[100];
     int phone;
     char bloodgroup[100];
     int reg;
     int priority;
-    struct node *next;
     int num;
+    struct node *next;
+    int disease;
 };
-struct node *start= NULL;
+struct node *head = NULL;
 struct node *insert(struct node *);
 struct node *delete(struct node *);
+void display(struct node *);
+/*
+pointer to function
+    void fun(int a)
+        printf("Value of a is %d\n", a);
+    int main()
+       void (*fun_ptr)(int);
+       fun_ptr = &fun; 
+*/
 int main()
 {
 
     int option;
-    do{
-        system("COLOR 20");
+    do
+    {
+        system("COLOR 80");
         printf("\t\t\t-------------------------------\n");
         printf("\t\t\t\t\t\t\t\t\t\t\t\n");
         printf("\t\t\t\t\t\t\t\t\t\t\n");
@@ -36,112 +46,104 @@ int main()
         printf("\t\t\t2.DELETE A RECORD\n");
         printf("\t\t\t3.DISPLAY ALL APPOINTMENTS\n");
         printf("\t\t\tEnter your choice:");
-        scanf("%d",&option);
-    switch(option)
-    {
-    case 1:
-        start= insert(start);
-        getchar();
-        system("cls");
-        break;
-    case 2:
-        start= delete(start);
-        getchar();
-        system("cls");
-        break;
-    case 3:
-        display(start);
-        getchar();
-        system("cls");
-        break;
-    case 4:
-        exit(0);
-        break;
-    }
-}while(option!=4);
+        scanf("%d", &option);
+        switch (option)
+        {
+        case 1:
+            head = insert(head);
+            getchar();
+            system("cls");
+            break;
+        case 2:
+            head = delete (head);
+            getchar();
+            system("cls");
+            break;
+        case 3:
+            display(head);
+            getchar();
+            system("cls");
+            break;
+        case 4:
+            exit(0);
+            break;
+        }
+    } while (option != 4);
 }
-struct node *insert(struct node *start)
+struct node *insert(struct node *head)
 {
-    int val2,val4,val6,pri;
-    char val1,val3,val5;
-    struct node *ptr,*p;
-    char* name[100];
-    char* address[100];
-    ptr=(struct node*)malloc(sizeof(struct node));
+    int pri;
+    struct node *newnode, *ptr;
+    newnode = (struct node *)malloc(sizeof(struct node));
     printf("Enter patient Name:");
-    scanf(" %s",ptr-> name);
+    scanf(" %s", newnode->name);
     printf("Enter the patient's age:");
-    scanf("%d",&val2);
+    scanf("%d", &newnode->age);
     printf("Enter your home address:");
-    scanf(" %s",ptr->address);
+    scanf(" %s", newnode->address);
     printf("Enter your phone number:");
-    scanf("%d",&val4);
+    scanf("%d", &newnode->phone);
     printf("Enter the blood group of Patient:");
-    scanf(" %s",ptr->bloodgroup);
+    scanf(" %s", newnode->bloodgroup);
     printf("Enter the reg no:");
-    scanf("%d",&val6);
-    printf("Enter your disease Number:");
+    scanf("%d", &newnode->reg);
     table();
-    scanf("%d",&disease);
-    //ptr->name=name;
-    ptr->age=val2;
-    //ptr->address=address;
-    ptr->phone=val4;
-    ptr->reg=val6;
-    ptr->priority=pri;
-    //ptr->disease=pri;
-    if((start==NULL)||pri<start->priority)
+    printf("Enter your disease Number:");
+    scanf("%d", &newnode->disease);
+    //newnode->priority = pri;
+    // newnode->disease=pri;
+    if ((head == NULL))
     {
-        ptr->next=start;
-        start=ptr;
+        newnode->next = head;
+        head = newnode;
     }
     else
-        {
-            p=start;
-            while(p->next!=NULL && p->next->priority <=pri)
-                p=p->next;
-            ptr->next=p->next;
-            p->next=ptr;
-        }
-        return start;
+    {
+        ptr = head;
+        while (ptr->next != NULL)
+            ptr = ptr->next;
+        newnode->next = ptr->next;
+        ptr->next = newnode;
+    }
+    return head;
 };
-struct node *delete(struct node *start)
+struct node *delete(struct node *head)
 {
-    struct node *ptr;
-    if(start==NULL)
+    struct node *newnode;
+    if (head == NULL)
     {
         printf("\n NO PATIENT RECORD TO DELETE");
         return;
     }
     else
     {
-        ptr= start;
-        printf("\n Deleted Record is : %d",ptr->reg);
-        start=start->next;
-        free(ptr);
+        newnode = head;
+        printf("\n Deleted Record is : %d", newnode->reg);
+        head = head->next;
+        free(newnode);
     }
-    return start;
+    return head;
 };
-void display(struct node *start, int x)
+void display(struct node *head)
 {
-    struct node *ptr;
-    ptr=start;
-    if(start==NULL)
+    struct node *newnode;
+    newnode = head;
+    if (head == NULL)
         printf("\nTHERE IS NO PATIENT\n");
     else
     {
-        printf("\Priority wise appointments are:\n");
-        while(ptr!=NULL)
+        printf("\nPriority wise appointments are:\n");
+        while (newnode != NULL)
         {
-            	printf("The name of patient is:%s\n",ptr->name);
-                printf("The age of patient is:%d\n",ptr->age);
-                printf("The address of patient is : %s\n",ptr->address);
-                printf("Phone Number:%d\n",ptr->phone);
-                printf("The blood group of patient is:%s\n",ptr->bloodgroup);
-                printf("Disease of the patient is :  ");
-                print_disease(disease);
-                printf("---------------------------------------------------\n");
-                ptr=ptr->next;
+            printf("The name of patient is:%s\n", newnode->name);
+            printf("The age of patient is:%d\n", newnode->age);
+            printf("The address of patient is : %s\n", newnode->address);
+            printf("Phone Number:%d\n", newnode->phone);
+            printf("The blood group of patient is:%s\n", newnode->bloodgroup);
+            printf("Disease of the patient is :  ");
+            print_disease(newnode->disease);
+            printf("---------------------------------------------------\n");
+            newnode = newnode->next;
         }
     }
     getchar();
@@ -159,38 +161,40 @@ void table()
     printf("8.Viral Fever\n");
     printf("9.Common Cold/Head ache\n");
 }
-void print_disease(int n)
+void print_disease(int disease)
 {
-	switch (n){
-	
-		case 1:
-			printf("Heart attack\n");
-			return;
-		case 2: 
-			printf("Severe wound/Bleeding\n");
-			return;
-		case 3:
-			printf("Cancer\n");
-			return;
-		case 4:
-			 printf("Chest pain\n");
-			 return;
-		case 5:
-			 printf("Fracture\n");
-			 return;
-		case 6:
-			 printf("Diabetes Checkup\n");
-			 return;
-	    case 7:
-	    	 printf("Infection\n");
-	    	 return;
-	    case 8:
-	    	 printf("Viral Fever\n");
-	    	 return;
-	    case 9:
-	    	 printf("Common Cold/Head ache\n");
-	    	 return;
-	    default:
-	    	exit(0);
-	    }
+    switch (disease)
+    {
+
+    case 1:
+        printf("Heart attack\n");
+        break;
+    case 2:
+        printf("Severe wound/Bleeding\n");
+        break;
+    case 3:
+        printf("Cancer\n");
+        break;
+    case 4:
+        printf("Chest pain\n");
+        break;
+    case 5:
+        printf("Fracture\n");
+        break;
+    case 6:
+        printf("Diabetes Checkup\n");
+        break;
+    case 7:
+        printf("Infection\n");
+        break;
+    case 8:
+        printf("Viral Fever\n");
+        break;
+    case 9:
+        printf("Common Cold/Head ache\n");
+        break;
+    default:
+        exit(0);
+    }
 }
+

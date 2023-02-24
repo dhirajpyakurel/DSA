@@ -5,7 +5,7 @@
 struct Contact{
     struct Contact *prev,*next;
     char name[50];
-    char phone[10];
+    char phone[13];
     // unsigned long long int phone;
 };
 struct Contact *head = NULL;
@@ -325,15 +325,12 @@ void deleteSpecificContact()
     }
     printf("\nEnter the index of the contact that you want to delete: ");
     scanf("%d",&i);
-    printf("After taking i");
     ptr=head;
     do{
         j++;   
         ptr=ptr->next;
     }while(ptr!=NULL);
-    printf("After do while loop\n");
     ptr=head;
-    printf("Value of j is: %d\n",j);
     if(i<=j && i>0)
     {
         if(i==1)
